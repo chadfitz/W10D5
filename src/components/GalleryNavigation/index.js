@@ -9,12 +9,12 @@ const GalleryNavigation = ({galleries}) => {
     console.log(galleries);
     return(
         <nav>
-        <h1>Galleries</h1>
-        {galleries.map(gallery => {
-            <NavLink to="galleries/${gallery.galleryid}">{gallery.name}</NavLink>
-        })
-    }
-        <NavLink to="/">Home Page</NavLink>
+            <h1>Galleries</h1>
+            {galleries.map(gallery => {
+                <li><NavLink to={`/galleries/${gallery.galleryid}`}>test</NavLink>
+                </li>
+            })}
+            <NavLink to="/">Home Page</NavLink>
         </nav>
     )   
 }
